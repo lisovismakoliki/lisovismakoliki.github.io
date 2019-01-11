@@ -8,26 +8,16 @@
 </head>
 <body>
 <div id = wrapper>
-
     <div id = header>
         <h1>Смаколыкы рулять!</h1>
     </div>
-
         <div id = content>
             <ul id = goods_list>
-
             </ul>
-
-
-
         </div>
     </section>
     <div id = footer></div>
-
 </div>
-
-
-
 </body>
 <script src = "tovar/tovari.js"></script>
 <script>
@@ -35,8 +25,6 @@
     for (let key in Tovari){
         addGoodToPage(key, Tovari[key] );
     }
-
-
 
     function addGoodToPage(goodIndex, goodDescription){
         let listItem = document.createElement("li");
@@ -51,16 +39,6 @@
         listItem.appendChild(goodDescriptionBlock);
         goodsList.appendChild(listItem);
     }
-
-
-
-
-
-
-
-
-
-
 </script>
 
 </html>
