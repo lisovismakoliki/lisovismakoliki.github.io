@@ -47,41 +47,6 @@
         let goodDescriptionBlock = document.createElement("P");
         goodDescriptionBlock.innerText = goodDescription;
 
-        // if(!("tovar/" + goodIndex + ".jpg")) {
-        //     console.log("alert");
-        // }
-
-
-
-        let xhr = new XMLHttpRequest();
-        let xhrString = "https://lisovismakoliki.github.io/tovar/" + goodIndex + ".jpg";
-        xhr.open('GET', xhrString, true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                console.log(xhr.status)
-
-
-
-            }
-        };
-        xhr.send();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         listItem.appendChild(goodImage);
         listItem.appendChild(goodDescriptionBlock);
         goodsList.appendChild(listItem);
