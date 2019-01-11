@@ -1,1 +1,139 @@
-<h1> hello users </h1>
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Grin Oleksandr Page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id = wrapper>
+
+    <div id = header>
+        <h1>Смаколыкы рулять!</h1>
+    </div>
+
+        <div id = content>
+            <ul id = goods_list>
+
+            </ul>
+
+
+
+        </div>
+    </section>
+    <div id = footer></div>
+
+</div>
+
+
+
+</body>
+<script src = "tovar/tovari.js"></script>
+<script>
+    const goodsList = document.getElementById("goods_list");
+    for (let key in Tovari){
+        addGoodToPage(key, Tovari[key] );
+    }
+
+
+
+    function addGoodToPage(goodIndex, goodDescription){
+        let listItem = document.createElement("li");
+
+        let goodImage = document.createElement("img");
+        goodImage.src = "tovar/" + goodIndex + ".jpg";
+
+        let goodDescriptionBlock = document.createElement("P");
+        goodDescriptionBlock.innerText = goodDescription;
+
+        // if(!("tovar/" + goodIndex + ".jpg")) {
+        //     console.log("alert");
+        // }
+
+
+
+        let xhr = new XMLHttpRequest();
+        let xhrString = "https://lisovismakoliki.github.io/tovar/" + goodIndex + ".jpg";
+        xhr.open('GET', xhrString, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                console.log(xhr.responseText)
+
+
+
+            }
+        };
+        xhr.send();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        listItem.appendChild(goodImage);
+        listItem.appendChild(goodDescriptionBlock);
+        goodsList.appendChild(listItem);
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
