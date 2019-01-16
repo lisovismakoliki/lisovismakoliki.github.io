@@ -21,7 +21,7 @@
 <script src = "tovar/tovari.js"></script>
 <script>
     const goodsList = document.getElementById("goods_list");
-    for (let i = 1; i <= Object.keys(Tovari); i++){
+    for (let i = 1; i <= Object.keys(Tovari).length; i++){
         addGoodToPage(i, Tovari[i] );
     }
 
