@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-<html lang = "ru">
-
+<html lang="ru">
 <head>
     <title>Смаколики!!!</title>
     <meta charset="utf-8">
@@ -8,35 +7,26 @@
 </head>
 <body>
 <div id = wrapper>
-
     <div id = header>
         <h1>Смаколики рулять!</h1>
     </div>
-
         <div id = content>
             <ul id = goods_list>
-
             </ul>
         </div>
-
+    </section>
     <div id = footer></div>
-
 </div>
-
-
-
 </body>
 <script src = "tovar/tovari.js"></script>
 <script>
     const goodsList = document.getElementById("goods_list");
-    for (let i = 1; i <= Object.keys(Tovari).length; i++){
+   for (let i = 1; i <= Object.keys(Tovari).length; i++){
         addGoodToPage(i, Tovari[i] );
     }
 
     function addGoodToPage(goodIndex, goodDescription){
         let listItem = document.createElement("li");
-
-        let listItemWrapper = document.createElement("div");
 
         let goodImage = document.createElement("img");
         goodImage.src = "tovar/" + goodIndex + ".jpg";
@@ -44,9 +34,8 @@
         let goodDescriptionBlock = document.createElement("P");
         goodDescriptionBlock.innerText = goodDescription;
 
-        listItemWrapper.appendChild(goodImage);
-        listItemWrapper.appendChild(goodDescriptionBlock);
-        listItem.appendChild(listItemWrapper);
+        listItem.appendChild(goodImage);
+        listItem.appendChild(goodDescriptionBlock);
         goodsList.appendChild(listItem);
     }
 
