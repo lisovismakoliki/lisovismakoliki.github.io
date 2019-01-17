@@ -15,45 +15,51 @@ body {
 }
 
 #goods_list {
-   
-    list-style: none;
+    width: 100%;
+    list-style:none;
     border: 3px solid black;
-    background: #f3f0f0;
-    display: flex;
+    background:#f3f0f0;
+    display:flex;
     flex-wrap: wrap;
-    /* flex-direction: row; */
-    /* align-items: center; */
+    /*flex-direction: row;*/
+    /*align-items: center;*/
     justify-content: flex-start;
-    padding: 0;
-    border-radius: 5px;
+    padding:0;
+    border-radius:5px;
 }
 
-li {
+#goods_list li div {
     border: 1px solid black;
-    border-radius:20px;
-    margin: 23px 1vw;
-    overflow:hidden;
-    width:420px;
-    display:flex;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #c6c6da;
 }
 
+li {
+    margin: 23px 1vw;
+    display:block;
+    width: calc( 33% - 2vw );
+}
 img {
-    width: 420px;
-    height: 400px;
-    border-bottom:2px solid black;
+    width: 30vw;
+    height: 50vh;
+    border-bottom: 2px solid black;
 }
 
 p {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-weight:800;
-    font-size:20px;
+    font-weight: 800;
+    font-size: 2vw;
     word-wrap: break-word;
     vertical-align: center;
+    width: 100%;
 }
