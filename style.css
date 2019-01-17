@@ -31,7 +31,7 @@ body {
 li {
     border: 1px solid black;
     border-radius:20px;
-    margin: 23px 0;
+    margin: 23px 1vw;
     overflow:hidden;
     width:420px;
     display:flex;
